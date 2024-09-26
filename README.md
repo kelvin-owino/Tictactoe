@@ -1,6 +1,6 @@
 HTML: Creates a 3x3 grid for the game board, along with a restart button and a message element that shows the result.
 symbols Display (CSS):
-
+https://kelvin-owino.github.io/Tictactoe/
 Added styles for X and O using pseudo-elements (::before), which will make the symbols visible when applied.
 The CSS class x will display an "X" and the class o will display an "O" inside the cells.
 Increased the font size to make the symbols large and readable inside the cells (font-size: 4rem;).
