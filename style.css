@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.5s ease;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.level-info {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 90vw;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.cell {
+    width: 100%;
+    padding-bottom: 100%; /* This keeps the cells square */
+    background-color: #fff;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;  /* Adjust this for symbol size */
+    cursor: pointer;
+    color: #333;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.cell:hover {
+    background-color: #f1f1f1;
+}
+
+/* X and O styles */
+.cell.x::before {
+    content: 'X';
+    font-size: 4rem;
+    color: #ff6f61;
+}
+
+.cell.o::before {
+    content: 'O';
+    font-size: 4rem;
+    color: #61a0ff;
+}
+
+/* Endgame screen */
+.endgame {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.endgame h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+@media (max-width: 400px) {
+    .board {
+        width: 100vw;
+        padding: 0 10px;
+    }
+
+    .cell {
+        font-size: 2.5rem;
+    }
+}
+
+.game-info {
+    color: #fff;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
